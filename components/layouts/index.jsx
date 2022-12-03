@@ -1,14 +1,12 @@
-import { Header, Footer } from "./index"
+import { Header, Footer } from "../index"
 
 export const Layout = ({ children }) => {
 
     return (
-        <>
+        <div className="wrapper">
             <Header />
-            <main>
                 {children}
-            </main>
             <Footer />
-        </>
+        </div>
     )
 }

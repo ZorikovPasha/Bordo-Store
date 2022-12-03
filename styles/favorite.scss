@@ -1,0 +1,142 @@
+.favorite {
+
+  padding: 46px 0 88px;
+
+		// .favorite__inner
+
+		&__inner {
+		}
+
+		// .favorite__title
+
+		&__title {
+      @extend %h1;
+      margin-bottom: 46px;
+		}
+
+		// .favorite__body
+
+		&__body {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, minmax(98px, auto));
+      grid-gap: 56px 41px;
+      height: 100%;
+		}
+
+		// .favorite__item
+
+		&__item {
+      display: grid;
+      &.removed {
+        display: none;
+      }
+		}
+
+		// .favorite__item-body
+
+		&__item-body {
+      display: flex;
+      align-items: flex-start;
+		}
+
+		// .favorite__item-img
+
+		&__item-img {
+      max-width: 75px;
+      margin-right: 20px;
+		}
+
+		// .favorite__item-info
+
+		&__item-info {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+		}
+
+		// .favorite__item-code
+
+		&__item-code {
+      font-size: 10px;
+      line-height: 15px;
+      color: #D6D6D6;
+      margin-bottom: 5px;
+		}
+
+		// .favorite__item-name
+
+		&__item-name {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 26px;
+		}
+
+    &__item-line {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 115px;
+      justify-self: flex-end;
+    }
+
+		// .favorite__item-price
+
+		&__item-price {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 21px;
+      padding-right: 15px;
+		}
+
+		// .favorite__item-btn
+
+		&__item-btn {
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+		}
+}
+
+
+@media (max-width:1180px) {
+  .favorite__body {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, minmax(98px, auto));
+    grid-gap: 50px 40px;
+  }
+}
+
+@media (max-width:992px) {
+  .favorite__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, minmax(98px, auto));
+  }
+  .favorite__item-img {
+    max-width: 120px;
+    width: 100%;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width:630px) {
+  .favorite__body {
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, minmax(98px, auto));
+  }
+}
+
+@media (max-width:400px) {
+  .favorite__item-img {
+    max-width: 90px;
+    width: 100%;
+    margin-right: 20px;
+  }
+  .favorite__body {
+    padding: 0;
+  }
+}

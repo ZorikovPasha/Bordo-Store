@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const apiConfig = {
   returnRejectedPromiseOnError: true,
-  baseURL: process.env.NODE_ENV === "production" ? "https://reactliebherrback.glitch.me/" : "http://localhost:5000",
+  baseURL: process.env.NODE_ENV === "production" ? "https://reactliebherrback.glitch.me/" : "http://localhost:3333",
   headers: {
     "Cache-Control": "no-cache, no-store, must-revalidate",
     "Content-Type": "application/json",

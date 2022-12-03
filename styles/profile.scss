@@ -1,0 +1,154 @@
+
+
+.profile {
+
+  padding: 46px 0 71px;
+
+  // .profile__inner
+
+  &__inner {
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  // .profile__title
+
+  &__title {
+    @extend %h1;
+
+  }
+
+  // .profile__link
+
+  &__link {
+    display: inline-block;
+    margin-left: 30px;
+    padding-left: 23px;
+    font-size: 12px;
+    line-height: 24px;
+    color: #969696;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      background-image: url('../images/exit.svg');
+    }
+  }
+
+  // .profile__items
+
+  &__items {
+    display: grid;
+    // grid-template-columns: 350px 350px 350px;
+    grid-template-columns: repeat(3, minmax(auto, 350px) );
+    grid-template-rows: repeat(2, minmax(154px, 1fr ));
+    grid-gap: 30px;
+  }
+
+  // .profile__item
+
+  &__item {
+    padding: 18px 21px 16px;
+    background-color: #FBFBFB;
+    display: flex;
+    position: relative;
+  }
+
+  // .profile__item-info
+
+  &__item-info {
+    max-width: 74%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  // .profile__item-label
+
+  &__item-label {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 6px;
+    padding-right: 4px;
+    span {
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+
+  // .profile__item-text
+
+  &__item-text {
+    font-size: 12px;
+    line-height: 13px;
+    color: #969696;
+  }
+
+  // .profile__item-link
+
+  &__item-link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    justify-self: flex-end;
+    margin-top: auto;
+  }
+}
+
+
+@media (max-width:1110px) {
+  .profile__items {
+    grid-template-columns: repeat(2, minmax(auto, 48%));
+    grid-template-rows: repeat(3, minmax(154px, 1fr));
+    grid-gap: 15px;
+  }
+}
+
+@media (max-width:767px) {
+  .profile__item-link {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .profile__item-label {
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .profile__item-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media (max-width:640px) {
+  .profile__top {
+    display: block;
+    text-align: center;
+  }
+  .profile__link {
+    display: inline-block;
+    margin-left: 0px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .profile__items {
+    max-width: 300px;
+    margin: 0 auto;
+    grid-template-columns: repeat(1, minmax(auto, 99%));
+    grid-template-rows: repeat(6, minmax(154px, 1fr));
+  }
+}

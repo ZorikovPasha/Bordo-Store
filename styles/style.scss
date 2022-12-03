@@ -1,8 +1,27 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 @import "_null.scss";
 @import "_global.scss";
+
 @import "_header.scss";
 @import "_footer.scss";
-@import "_animate.scss";
+
 
 @import "main.scss";
-@import "mob-menu.scss";
+@import "catalogue.scss";
+@import "category.scss";
+@import "product-card.scss";
+@import "order.scss";
+@import "basket.scss";
+@import "favorite.scss";
+@import "delivery.scss";
+@import "about.scss";
+@import "profile.scss";
+@import "user-info.scss";
+@import "signup.scss";
+@import "login.scss";
+@import "restore-password.scss";
+
+@import "_media.scss";
+// @import "_animate.scss";
